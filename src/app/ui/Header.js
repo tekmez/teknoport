@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="bg-white">
+    <header className="bg-white sticky top-0">
       <nav>
         <div className="container mx-auto flex justify-between items-center gap-8 py-6 px-4 md:py-4 md:justify-center">
           <div className="flex items-center">
