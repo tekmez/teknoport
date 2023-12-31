@@ -17,8 +17,8 @@ const CategoryList = ({ categories, activeIndex, onCategoryClick }) => {
   return (
     <div className="w-full overflow-x-auto">
       <div
-        className="flex  items-center gap-4 sm:gap-8"
-        style={{ width: "max-content" }}
+        className="flex justify-center items-center gap-4 sm:gap-8 w-min sm:w-full"
+        // style={{ width: "min-content" }}
       >
         {categories.map((category, index) => (
           <div
