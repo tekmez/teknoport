@@ -1,3 +1,10 @@
+## Used Technologies
+
+- **Tailwind CSS:** A fast and customizable CSS framework. [Tailwind CSS](https://tailwindcss.com/)
+
+- **Next.js:** A React-based web application framework. [Next.js](https://nextjs.org/)
+
+
 | DESKTOP                             | MOBILE                              |
 | ----------------------------------- | ----------------------------------- |
 | ![000](https://github.com/tekmez/teknoport/assets/79506815/161d4f9f-c985-402a-b08c-c6f3e02bc0f7) | ![mobile](https://github.com/tekmez/teknoport/assets/79506815/65492e61-5d59-426a-a89c-4c3d64260e42) |
@@ -9,8 +16,6 @@
 
 
 
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
