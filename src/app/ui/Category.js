@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import { useState } from "react";
 
 const CommonCategoryCard = ({ icon, title }) => {
   return (
@@ -11,17 +13,27 @@ const CommonCategoryCard = ({ icon, title }) => {
   );
 };
 
-const CategoryList = ({ categories }) => {
+const CategoryList = ({ categories, activeIndex, onCategoryClick }) => {
   return (
-    <div className="w-full justify-center items-center gap-4 sm:gap-8 inline-flex flex-wrap">
+    <div className="w-full justify-center items-center gap-4 sm:gap-8 inline-flex overflow-x-auto">
       {categories.map((category, index) => (
-        <CommonCategoryCard key={index} {...category} />
+        <div
+          key={index}
+          onClick={() => onCategoryClick(index)}
+          className={`${
+            activeIndex === index ? "border-b-2 border-black" : ""
+          } cursor-pointer`}
+        >
+          <CommonCategoryCard {...category} />
+        </div>
       ))}
     </div>
   );
 };
 
 const Category = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
   const categories = [
     {
       icon: (
@@ -63,12 +75,21 @@ const Category = () => {
       title: "Gaming",
     },
   ];
+
+  const handleCategoryClick = (index) => {
+    setActiveIndex(index);
+  };
+
   return (
     <div className="w-full px-4 py-2 sm:px-8 sm:py-4 flex justify-center items-center flex-wrap">
       <div className="text-2xl sm:text-4xl font-bold text-black mb-4">
         Categories
       </div>
-      <CategoryList categories={categories} />
+      <CategoryList
+        categories={categories}
+        activeIndex={activeIndex}
+        onCategoryClick={handleCategoryClick}
+      />
     </div>
   );
 };

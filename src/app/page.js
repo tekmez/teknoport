@@ -12,8 +12,8 @@ export default function Home() {
           <p className="opacity-40 text-lg">
             Created to change everything for the better. For everyone
           </p>
-          <button className="w-44 inline-flex py-4 px-14 justify-center items-center gap-2 rounded-md border border-white border-solid text-white self-center xl:self-start">
-            Button
+          <button className="w-44 inline-flex py-4 px-13 justify-center items-center gap-2 rounded-md border border-white border-solid text-white self-center xl:self-start">
+            BUY NOW
           </button>
         </div>
         <Image
