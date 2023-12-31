@@ -15,18 +15,23 @@ const CommonCategoryCard = ({ icon, title }) => {
 
 const CategoryList = ({ categories, activeIndex, onCategoryClick }) => {
   return (
-    <div className="w-full justify-center items-center gap-4 sm:gap-8 inline-flex overflow-x-auto">
-      {categories.map((category, index) => (
-        <div
-          key={index}
-          onClick={() => onCategoryClick(index)}
-          className={`${
-            activeIndex === index ? "border-b-2 border-black" : ""
-          } cursor-pointer`}
-        >
-          <CommonCategoryCard {...category} />
-        </div>
-      ))}
+    <div className="w-full overflow-x-auto">
+      <div
+        className="flex  items-center gap-4 sm:gap-8"
+        style={{ width: "max-content" }}
+      >
+        {categories.map((category, index) => (
+          <div
+            key={index}
+            onClick={() => onCategoryClick(index)}
+            className={`${
+              activeIndex === index ? "border-b-2 border-black" : ""
+            } cursor-pointer`}
+          >
+            <CommonCategoryCard {...category} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
