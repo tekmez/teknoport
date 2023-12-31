@@ -3,7 +3,7 @@ import "./globals.css";
 import Header from "./ui/Header";
 import SubNav from "./ui/SubNav";
 import Footer from "./ui/Footer";
-
+import { SpeedInsights } from "@vercel/speed-insights/next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -19,6 +19,7 @@ export default function RootLayout({ children }) {
         {/* <SubNav /> */}
         <main>{children}</main>
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );
